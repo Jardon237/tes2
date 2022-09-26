@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+</head>
+    <div class="gradient">
+        <div class="text">
+            <h1>Welcome To TravelWorld</h1>
+        </div>
+
+        <form action="" class="cust-info">
+            <label for="name">date</label>
+            <input type="date" name="date" id="">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" id="">
+            <label for="name">ID Number</label>
+            <input type="text" name="" id="">
+        </form>
+<form class="container-bus">
+    
+    <div class="bus">
+        Bus type: <br>
+        <select>
+            <option value="vip">VIP</option>
+            <option value="standard">Standard</option>
+        </select>
+    </div>
+    <div class="bus">
+        Schedule: <br>
+        <select>
+            <option value="Day">Day</option>
+            <option value="Night">Night</option>
+        </select>
+    </div>
+    <div class="bus">
+        Type:<br>
+        <select>
+            <option value="70">70 seater</option>
+            <option value="30">30 seater</option>
+        </select>
+    </div>
+    <div class="bus">
+        Fare:<br>
+        <select>
+            <option value="5500">5500 FCFA</option>
+            <option value="7000">7000 FCFA</option>
+        </select>
+    </div>
+    <div class="bus">
+        Availabel seats:<br>
+        <select>
+            <option value="70">70 seats</option>
+            <option value="30">30 seats</option>
+        </select>
+    </div>
+    <div class="bus">
+        View seats:<br>
+        <a class="act" href="{% url 'seat' %}">View</a>
+    </div>
+    <!-- <div class="bus">
+        Pay:<br>
+        <button onclick="alert('No payment method selected');">Pay</button>
+    </div> -->
+
+</div>
+</form>
+{% endblock content%}

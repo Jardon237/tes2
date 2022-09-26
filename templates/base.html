@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<a href="{{request.META.HTTP_REFERER|escape}}">Back</a>
+	</head>
+	<body>
+		
+		<header>
+			<a href="index.html" class="logo"><p class="logo">TravelWorld</p></a>
+			
+			<ul class="nav_links">
+				<a href="index.html"><li class="home">Home</li></a>
+				<a href="#Bus search"><li class="search">Bus search</li></a>
+				<a href="#h1"><li class="about">About Us</li></a>
+				<a href="#h2"><li class="contact">Contact Us</li></a>
+			</ul>
+			
+			<a class="cta" href="{% url 'signin' %}"><button>My Account</button></a>
+		</header>
+
+{% block content %}
+
+{% endblock content %}
+
+<footer>
+   &copy; Travel World.inc
+   <h1>Contact us:</h1>
+   <ul class="contact">
+      <li class="contact-items"><a href="#" class="fa fa-facebook"></a>Facebook</li>
+      <li class="contact-items"><a href="#" class="fa fa-twitter"></a>Twitter</li>
+      <li class="contact-items"><a href="#" class="fa fa-envelope"></a>Email</li>
+      <li class="contact-items"><a href="#" class="fa fa-whatsapp"></a>Whatsapp</li>
+   </ul>
+   
+</footer>
+</body>
+</html>
+

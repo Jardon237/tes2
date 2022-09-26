@@ -1,0 +1,51 @@
+{% extends 'base.html' %}</header>
+{% block content %}
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+    
+</div>
+    <div class="main">
+        <div class="gradient">
+            <div class="text">
+                <h1>Welcome To TravelWorld</h1>
+            </div>
+        </div>
+
+        <div class="account">
+            <h2 style="text-align: center;">Create Account</h2>
+            <form action="{% url 'sigup' %}" class="signup" method="POST">
+            
+               {% csrf_token %} 
+               <label for="user name">username</label>
+                <input type="text" placeholder="username" required name="username">
+                
+                <label for="first name">first Name</label>
+                <input type="text" placeholder="First Name" required  name="fname"/><br />
+                
+                <label for="last name"> last Name</label>
+                <input type="text" placeholder="Last Name" required  name="lname"/><br />
+                
+                <label for="email adress">e mail</label>
+                <input type="email" placeholder="Email" required name ="email"/><br />
+                
+                <label for="password">password</label>
+                <input type="password" placeholder="password" required  name="pass1"/><br />
+                
+                <label for="confirm passwsord">comfirm password</label>
+                <input type="password" placeholder="confirm password" required  name="pass2"/><br />
+                <div class="displays">
+                    <div class="buttons">
+                        <button type="submit" class="submit">Create</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                    <div class="account-exist">
+                        <h4>Already have an account? &nbsp;&nbsp;<a href="{% url 'signin' %}">Login</a></h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

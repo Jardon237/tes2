@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static%}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+</head>
+    
+    </div>
+    <div class="main">
+        <div class="gradient">
+            <div class="text">
+                <h1 style="color: #0f2453;">Welcome To TravelWorld</h1>
+            </div>
+        </div>
+
+        <div class="account">
+            <h2 style="text-align: center;">Login</h2>
+            <form action="{% url 'signin' %}"  method="post" class="signup">
+                {% csrf_token%}
+                <label for="user name">username</label>
+                <input type="text" placeholder="username" required name="username ">
+
+                
+                <label for="password">password</label>
+                <input type="password" placeholder="password" required  name="pass1"/><br />
+                
+                <div class="displays">
+                    <div class="buttons">
+                        <button type="submit" class="submit">Login</button>
+                        <button type="button" class="cancel">Cancel</button>
+                    </div>
+                    <div class="account-exist">
+                        <h4>OR &nbsp;&nbsp;<a href="{% url 'sigup' %}">Create Account</a></h4>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+{% endblock content%}
